@@ -3,14 +3,17 @@
       <form method.prevent="POST" class="mt-5">
         <div class="form-row">
           <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Ваше имя" required>
-        </div>
+            <label for="formName"></label>
+            <input type="text" class="form-control" placeholder="Ваше имя" id="formName" required>
+          </div>
         <div class="form-group col-md-6">
-          <input type="tel" class="form-control" placeholder="Номер телефона" required>
+          <label for="formTel"></label>
+          <input type="tel" class="form-control" placeholder="Номер телефона" id="formTel" required>
         </div>
       </div>
       <div class="form-group">
-        <textarea class="form-control textAreaBig" placeholder="Ваше сообщение"></textarea>
+        <label for="formMsg"></label>
+        <textarea class="form-control textAreaBig" placeholder="Ваше сообщение" id="formMsg"></textarea>
       </div>
 
       <div class = "submitBtn form-group">
