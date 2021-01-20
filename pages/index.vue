@@ -24,25 +24,25 @@
     </div>
   </div>
 
-  <section class="container-fluid">
-    <div class="card margin-cards">
-      <div class="row no-gutters">
-        <div class="col-md-6">
-          <img src="./assets/img/pool_1.jpg" class="card-img" alt="...">
-        </div>
-        <div class="col-md-6 align-self-center">
-          <div class="card-body">
-            <h5 class="card-title">Бассейны</h5>
-            <p class="card-text mt-4 mb-4">This is a wider card with supporting text
-              below as a natural lead-in to additional content.
-              This content is a little bit longer.</p>
-            <button class="btn-small btn-lightgreen">Перейти</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--  <section class="container-fluid">-->
+<!--    <div class="card margin-cards">-->
+<!--      <div class="row no-gutters">-->
+<!--        <div class="col-md-6">-->
+<!--          <img src="./assets/img/pool_1.jpg" class="card-img" alt="...">-->
+<!--        </div>-->
+<!--        <div class="col-md-6 align-self-center">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Бассейны</h5>-->
+<!--            <p class="card-text mt-4 mb-4">This is a wider card with supporting text-->
+<!--              below as a natural lead-in to additional content.-->
+<!--              This content is a little bit longer.</p>-->
+<!--            <button class="btn-small btn-lightgreen">Перейти</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-  </section>
+<!--  </section>-->
 
 
 </template>
@@ -114,6 +114,7 @@ a {
   border: none;
   box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.12);
 }
+
 
 
 </style>
