@@ -3,16 +3,16 @@
       <form method.prevent="POST">
         <div class="form-row">
           <div class="form-group col-md-6">
-          <label></label>
+          <label>Одноко</label>
           <input type="text" class="form-control" placeholder="Ваше имя" required>
         </div>
         <div class="form-group col-md-6">
-          <label></label>
+          <label>Двоко</label>
           <input type="tel" class="form-control" placeholder="Номер телефона" required>
         </div>
       </div>
       <div class="form-group">
-        <label></label>
+        <label>Троко</label>
         <textarea class="form-control textAreaBig" placeholder="Ваше сообщение"></textarea>
       </div>
 
@@ -37,10 +37,6 @@
 <script>
   export default {
     name: 'Form',
-    data(){
-
-    }
-
   }
 </script>
 
