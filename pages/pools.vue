@@ -31,49 +31,49 @@
         return {
             pools: [
                 {
-                    image: '@/assets/img/baden.png',
+                    image: '/img/baden.png',
                     title: 'Баден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: './assets/img/eden.png',
+                    image: '/img/eden.png',
                     title: 'Эден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: './static/img/balaton.png',
+                    image: '/img/balaton.png',
                     title: 'Балатон',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '/static/img/mayami.png',
+                    image: '/img/mayami.png',
                     title: 'Майами',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '/static/img/baden.png',
+                    image: '/img/baden.png',
                     title: 'Баден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '/static/img/eden.png',
+                    image: '/img/eden.png',
                     title: 'Эден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '/static/img/balaton.png',
+                    image: '/img/balaton.png',
                     title: 'Балатон',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '/static/img/mayami.png',
+                    image: '/img/mayami.png',
                     title: 'Майами',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
