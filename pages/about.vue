@@ -2,7 +2,7 @@
     <div class="container-fluid about-spacer">
 
       <h1 class="mt-5 mb-5">О нас</h1>
-      <img src="/static/img/bh-header2.jpg" class="img-fluid about-img" alt="...">
+      <img src="@/static/img/bh-header2.jpg" class="img-fluid about-img" alt="...">
 
       <h4 class="mt-5 mb-5">Курорт дома круглый год</h4>
       <p class="mb-5">Полюбите бассейн так, как любим его мы!
@@ -27,6 +27,6 @@
 <style>
     .about-img{
       border-radius: 5px;
-      box-shadow: 0px 5px 5px rgba(22, 22, 22, 0.3);
+      box-shadow: 0 5px 5px rgba(22, 22, 22, 0.3);
     }
 </style>

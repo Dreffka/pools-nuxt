@@ -1,18 +1,15 @@
 <template>
   <div>
-      <form method.prevent="POST">
+      <form method.prevent="POST" class="mt-5">
         <div class="form-row">
           <div class="form-group col-md-6">
-          <label>Одноко</label>
           <input type="text" class="form-control" placeholder="Ваше имя" required>
         </div>
         <div class="form-group col-md-6">
-          <label>Двоко</label>
           <input type="tel" class="form-control" placeholder="Номер телефона" required>
         </div>
       </div>
       <div class="form-group">
-        <label>Троко</label>
         <textarea class="form-control textAreaBig" placeholder="Ваше сообщение"></textarea>
       </div>
 

@@ -31,49 +31,49 @@
         return {
             pools: [
                 {
-                    image: '@static/img/baden.png',
+                    image: '@/static/img/baden.png',
                     title: 'Баден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/eden.png',
+                    image: './static/img/eden.png',
                     title: 'Эден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/balaton.png',
+                    image: '/static/img/balaton.png',
                     title: 'Балатон',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/mayami.png',
+                    image: '/static/img/mayami.png',
                     title: 'Майами',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/baden.png',
+                    image: '/static/img/baden.png',
                     title: 'Баден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/eden.png',
+                    image: '/static/img/eden.png',
                     title: 'Эден',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/balaton.png',
+                    image: '/static/img/balaton.png',
                     title: 'Балатон',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
             },
             {
-                    image: '@static/img/mayami.png',
+                    image: '/static/img/mayami.png',
                     title: 'Майами',
                     text: '2,00м х 2,00м х 0,90м',
                     url: '#'
