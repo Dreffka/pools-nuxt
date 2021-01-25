@@ -1,3 +1,6 @@
+
+/*стили*/
+
 html {
   font-family:
     'Source Sans Pro',
@@ -14,6 +17,7 @@ p, span{
   font-size: 18px;
 }
 h1{
+    font-family: Roboto;
   font-size: 44px;
 }
 h2{
@@ -78,3 +82,39 @@ h5{
   border: none;
   outline: none;
 }
+
+
+
+/*Форма для футера*/
+
+footer-form .form-group.col-md-6{
+        margin: 0px;
+    }
+
+    .footer-form .form-group{
+        padding: 0px;
+        max-width: 100%;
+    }
+    .footer-form .form-control {
+        height: 40px;
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+    .footer-form .form-row{
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .footer-form textarea.form-control{
+        height: 70px;
+    }
+
+    .footer-form .btn{
+        max-height: 60px;
+        width: 100%;
+    }
+
+    .footer-form form{
+        margin: 20px 0px !important;
+    }

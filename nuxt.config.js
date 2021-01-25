@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/static/css/reset.css',
     '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
     '@/static/css/style.css'
   ],
