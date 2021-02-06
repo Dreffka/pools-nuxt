@@ -24,6 +24,7 @@
       </nuxt-link>
     </div>
   </div>
+    <Accordion/>
     <section class="container-fluid">
       <div class="card margin-cards">
         <div class="row no-gutters">
@@ -61,13 +62,18 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 94vh;
+  height: 100vh;
   position: relative;
 }
+@media screen and (max-width: 900px) {
+  .main-screen {
+  }
+}
+
 .heading-right {
   position: absolute;
   right: 10%;
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: right;
   color: #fff;
   text-shadow: 2px 2px 3px black;
@@ -106,7 +112,6 @@ a {
   border: none;
   box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.12);
 }
-
 
 
 </style>

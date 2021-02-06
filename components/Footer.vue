@@ -1,11 +1,9 @@
 <template>
-  <footer class="blue">
+  <footer class="back-color">
     <div class="container-fluid">
         <div class="row">
-
 <!--           Первая колонка-->
-
-            <div class="col-md first">
+            <div class="col-md-7">
                <a href=""><img class = 'footer-logo' src="@/static/logo.png" alt=""></a>
                 <div class="footer-mid">
                     <h2>Центральный офис</h2>
@@ -17,42 +15,32 @@
                     <p><a href="#">Политика конфиденциальности</a></p>
                 </div>
             </div>
-
 <!--           Вторая колонка-->
-
-            <div class="col-md second">
+            <div class="col-md-5">
                 <div>
                     <h3>Остались вопросы?</h3>
                     <h3>Будем рады на них ответить.</h3>
                 </div>
-                <div class = 'footer-form'>
+                <div class="footer-form">
                     <Form />
                 </div>
             </div>
         </div>
-
-
-
 <!--        Черта и под чертой-->
         <div class="row footer-second">
             <hr>
-              <div class="row ">
+            <div class="row">
                 <p>© 2016-{{ new Date().getFullYear() }} ООО "Green Office"</p>
               </div>
-
           <div class="social-media">
             <a href="https://instagram.com/greenoffice38" target="_blank"><img src="@/static/img/tech/instagram.png"  alt="instagram"></a>
             <a href=""><img src="@/static/img/tech/facebook.png" alt="facebook"></a>
             <a href=""><img src="@/static/img/tech/viber.png" alt="viber"></a>
           </div>
-
         </div>
      </div>
   </footer>
-
 </template>
-
-
 
 
 <script>
@@ -69,7 +57,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 
 /*    Общие настройки*/
 
@@ -81,22 +69,19 @@ export default {
         line-height: 30px;
     }
 
-     p{
+     p {
         font-family: Open Sans;
         font-weight: 400;
     }
 
-     a{
+     a {
         color: #2c7bc2;
         text-decoration: underline;
     }
 
-
-
-
 /*    Сам футер в общем */
 
-   footer.blue{
+   footer.back-color{
         padding: 50px 0;
         width: 100%;
         background-color: #000101 ;
@@ -104,30 +89,18 @@ export default {
     }
 
 
-    .first{
-        flex-basis: 45%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .second{
-        flex-basis: 20%;
-        padding-top: 40px;
-    }
-
-
-
 /*    Верхняя часть первой колонки*/
 
     .footer-logo{
-        max-width: 400px;
+        width: 250px;
+        max-width: 350px;
         margin-top: 25px;
+        /*margin-left: 0;*/
     }
 
     .footer-mid{
         margin-top: 40px;
-        margin-left: 30px;
-        padding-right: 40%;
+        /*margin-left: 0;*/
     }
 
     .footer-mid h2{
@@ -146,7 +119,7 @@ export default {
     .footer-bottom{
         margin-top: 70px;
         font-weight: 500;
-        margin-left: 30px;
+        /*margin-left: 0;*/
     }
 
 
@@ -188,18 +161,6 @@ export default {
         height:1px;
         background:#ccc;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </style>

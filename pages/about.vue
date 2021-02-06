@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid about-spacer">
 
-      <h1 class="mt-5 mb-5">О нас</h1>
+      <h1 class="mt-3 mb-5">О нас</h1>
       <img src="/img/bh-header2.jpg" class="img-fluid about-img" alt="...">
 
       <h4 class="mt-5 mb-5">Курорт дома круглый год</h4>

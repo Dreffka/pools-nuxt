@@ -11,27 +11,28 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
+    background-color: #e0eaee;
 }
 
-p, span{
-  font-size: 18px;
-}
-h1{
-    font-family: Roboto;
-  font-size: 44px;
-}
-h2{
-  font-size: 40px;
-}
-h3{
-  font-size: 38px;
-}
-h4{
-  font-size: 36px;
-}
-h5{
-  font-size: 34px;
-}
+/*p, span{*/
+/*  font-size: 18px;*/
+/*}*/
+/*h1{*/
+/*    font-family: Roboto;*/
+/*  font-size: 44px;*/
+/*}*/
+/*h2{*/
+/*  font-size: 40px;*/
+/*}*/
+/*h3{*/
+/*  font-size: 38px;*/
+/*}*/
+/*h4{*/
+/*  font-size: 36px;*/
+/*}*/
+/*h5{*/
+/*  font-size: 34px;*/
+/*}*/
 
 .container-fluid{
   padding-left: 10%;
@@ -87,12 +88,12 @@ h5{
 
 /*Форма для футера*/
 
-footer-form .form-group.col-md-6{
-        margin: 0px;
-    }
+/*footer-form .form-group.col-md-6{*/
+/*        margin: 0;*/
+/*    }*/
 
     .footer-form .form-group{
-        padding: 0px;
+        padding: 0;
         max-width: 100%;
     }
     .footer-form .form-control {
@@ -103,7 +104,7 @@ footer-form .form-group.col-md-6{
 
     .footer-form .form-row{
         flex-direction: column;
-        margin: 0px;
+        margin: 0;
     }
 
     .footer-form textarea.form-control{
@@ -115,6 +116,6 @@ footer-form .form-group.col-md-6{
         width: 100%;
     }
 
-    .footer-form form{
-        margin: 20px 0px !important;
-    }
+    /*.footer-form form{*/
+    /*    margin: 20px 0 !important;*/
+    /*}*/

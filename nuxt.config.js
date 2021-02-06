@@ -22,11 +22,13 @@ export default {
   css: [
     '@/static/css/reset.css',
     '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
-    '@/static/css/style.css'
+    '@/static/css/style.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // '@/plugins/vue-light-gallery.js'
+    { src: '~/plugins/vue-light-gallery', mode: "client" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -38,9 +40,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    'bootstrap-vue/nuxt'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    // vendor: ['vue-light-gallery'],
+    babel: {
+      compact: true,
+    }
+  },
+
+
 }

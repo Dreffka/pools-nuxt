@@ -1,6 +1,6 @@
 <template>
   <div>
-      <form method.prevent="POST" class="mt-5">
+      <form method.prevent="POST" class="mt-3">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="formName"></label>
@@ -19,7 +19,6 @@
       <div class = "submitBtn form-group">
         <button type="submit" class="btn btn-lightgreen">Отправить</button>
       </div>
-
   </form>
     </div>
 
@@ -42,7 +41,7 @@
 
 <style scoped>
 .submitBtn {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .form-row {
   display: flex;
@@ -50,14 +49,11 @@
 .form-control {
   height: 75px;
 }
-
 .form-group {
   padding-right: 10px;
 }
 .textAreaBig{
-  height: 180px
+  height: 180px;
 }
-
-
 </style>
 
