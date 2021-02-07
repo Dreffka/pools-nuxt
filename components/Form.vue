@@ -22,14 +22,14 @@
   </form>
     </div>
 
-  <!-- <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        *Соглашаюсь на обработку данных
-      </label>
-    </div>
-  </div> -->
+<!--   <div class="form-group">-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="checkbox" id="gridCheck">-->
+<!--      <label class="form-check-label" for="gridCheck">-->
+<!--        *Соглашаюсь на обработку данных-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div> -->
 
 </template>
 
