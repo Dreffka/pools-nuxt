@@ -1,14 +1,22 @@
 <template>
   <footer class="back-color">
+
     <div class="container-fluid">
         <div class="row">
 <!--           Первая колонка-->
             <div class="col-md-7">
-               <a href=""><img class = 'footer-logo' src="@/static/logo.png" alt=""></a>
+               <nuxt-link to="/"><img class = 'footer-logo' src="@/static/logo.png" alt=""></nuxt-link>
                 <div class="footer-mid">
                     <h2>Центральный офис</h2>
-                    <p><strong>Адрес:</strong> г. Запорожье, ул.Такая-то 8/88</p>
-                    <p><strong>Телефон: </strong><a href="tel:0988633533"> +38 (098) 863-35-33</a></p>
+                    <div class="social-media">
+                        <a href="https://instagram.com/greenoffice38" target="_blank"><img src="@/static/img/tech/instagram.png"  alt="instagram"></a>
+                        <a href=""><img src="@/static/img/tech/facebook.png" alt="facebook"></a>
+                        <a href=""><img src="@/static/img/tech/viber.png" alt="viber"></a>
+                    </div>
+                    <div class="pt-3">
+                      <p>Адрес офиса: г. Запорожье, ул. Верхняя, 10</p>
+                      <p>Телефон: <a href="tel:0988633533"> +38 (098) 863-35-33</a> </p>
+                    </div>
                 </div>
                 <div class="footer-bottom">
                     <p>Установка бассейнов и поливов</p>
@@ -30,30 +38,27 @@
         <div class="row footer-second">
             <hr>
             <div class="row">
-                <p>© 2016-{{ new Date().getFullYear() }} ООО "Green Office"</p>
-              </div>
-          <div class="social-media">
-            <a href="https://instagram.com/greenoffice38" target="_blank"><img src="@/static/img/tech/instagram.png"  alt="instagram"></a>
-            <a href=""><img src="@/static/img/tech/facebook.png" alt="facebook"></a>
-            <a href=""><img src="@/static/img/tech/viber.png" alt="viber"></a>
-          </div>
+                <p>© 2006-{{ new Date().getFullYear() }} ООО "Green Office"</p>
+            </div>
         </div>
      </div>
   </footer>
 </template>
-
-
 <script>
-import Form from './Form.vue'
-
 export default {
-    name: 'Footer',
-    components: {
-        Form
-    }
+
+  // head() {
+  //   return {
+  //     script: [
+  //       {
+  //         src:
+  //           'http://code.jivosite.com/widget/kWaVw8nC3k'
+  //       }
+  //     ]
+  //   }
+  // }
 }
 </script>
-
 
 
 
@@ -61,38 +66,37 @@ export default {
 
 /*    Общие настройки*/
 
-     h2, footer h3{
-        font-size: 18pt;
-        font-family: Open Sans;
-        font-weight: 400;
-        text-transform: uppercase;
+    footer h3, footer h3{
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: capitalize;
         line-height: 30px;
     }
 
      p {
-        font-family: Open Sans;
         font-weight: 400;
+        font-size: 17px;
     }
 
      a {
-        color: #2c7bc2;
+        color: #53bb9d;
         text-decoration: underline;
     }
 
 /*    Сам футер в общем */
 
    footer.back-color{
-        padding: 50px 0;
+        padding-top: 50px;
         width: 100%;
-        background-color: #000101 ;
-        color: whitesmoke;
+        background-color: #001c40 ;
+        color: #f5f5f5;
     }
 
 
 /*    Верхняя часть первой колонки*/
 
     .footer-logo{
-        width: 250px;
+        width: 300px;
         max-width: 350px;
         margin-top: 25px;
         /*margin-left: 0;*/
@@ -100,7 +104,7 @@ export default {
 
     .footer-mid{
         margin-top: 40px;
-        /*margin-left: 0;*/
+        margin-left: 10px;
     }
 
     .footer-mid h2{
@@ -111,6 +115,7 @@ export default {
     .footer-mid p, .footer-bottom p{
         display: block;
         margin-bottom: 10px;
+        font-weight: 400;
     }
 
 
@@ -118,40 +123,39 @@ export default {
 
     .footer-bottom{
         margin-top: 70px;
-        font-weight: 500;
-        /*margin-left: 0;*/
+        font-weight: 300;
+        margin-left: 10px;
     }
 
 
 /*    После черты*/
 
-    .footer-second .social-media{
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
+    .social-media{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        margin: 20px 0;
+        /*justify-content: start;*/
+        /*align-items: center;*/
+        margin: 10px 0;
         max-width: 100%;
         min-width: 100%;
 
     }
 
-    .footer-second .social-media img{
+   .social-media img{
         height: 30px;
         margin: 5px 10px;
     }
 
-        .footer-second{
+
+    .footer-second{
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .footer-second .row{
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     hr{

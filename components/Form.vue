@@ -1,42 +1,73 @@
 <template>
   <div>
-      <form method.prevent="POST" class="mt-3">
+    <!-- <form method="post" class="mt-3">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="formName"></label>
-            <input type="text" class="form-control" placeholder="Ваше имя" id="formName" required>
+            <input type="text" class="form-control"  placeholder="Ваше имя" id="formName" v-model="name" required>
           </div>
-        <div class="form-group col-md-6">
-          <label for="formTel"></label>
-          <input type="tel" class="form-control" placeholder="Номер телефона" id="formTel" required>
+          <div class="form-group col-md-6">
+            <label for="formTel"></label>
+            <input type="tel" class="form-control"  placeholder="Номер телефона" id="formTel" v-model="telephone_number" required>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="formMsg"></label>
-        <textarea class="form-control textAreaBig" placeholder="Ваше сообщение" id="formMsg"></textarea>
-      </div>
+        <div class="form-group">
+          <label for="formMsg"></label>
+          <textarea class="form-control textAreaBig"  placeholder="Ваше сообщение" id="formMsg" v-model="answer" ></textarea>
+        </div>
 
-      <div class = "submitBtn form-group">
-        <button type="submit" class="btn btn-lightgreen">Отправить</button>
-      </div>
-  </form>
-    </div>
+        <div class = "submitBtn form-group">
+          <button type="submit" class="btn btn-lightgreen" @click.prevent="createClient()" >Отправить</button>
+        </div>
+      </form> -->
 
-<!--   <div class="form-group">-->
-<!--    <div class="form-check">-->
-<!--      <input class="form-check-input" type="checkbox" id="gridCheck">-->
-<!--      <label class="form-check-label" for="gridCheck">-->
-<!--        *Соглашаюсь на обработку данных-->
-<!--      </label>-->
-<!--    </div>-->
-<!--  </div> -->
 
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="formName"></label>
+            <input type="text" class="form-control"  placeholder="Ваше имя" id="formName" v-model="name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="formTel"></label>
+            <input type="tel" class="form-control"  placeholder="Номер телефона" id="formTel" v-model="telephone_number" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="formMsg"></label>
+          <textarea class="form-control textAreaBig"  placeholder="Ваше сообщение" id="formMsg" v-model="answer" ></textarea>
+        </div>
+
+        <div class = "submitBtn form-group">
+          <button type="submit" class="btn btn-lightgreen" @click.prevent="createClient()" >Отправить</button>
+        </div>
+
+
+
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Form',
+import axios from '@nuxtjs/axios'
+export default {
+  data() {
+    return {
+      name: '',
+      telephone_number: '',
+      answer: ''
+    }
+  },
+  methods: {
+
+    createClient(name, telephone_number, answer) {
+
+      axios.post('https://admin.greenoffice.in.ua/api/clients', {
+            name,
+            telephone_number,
+            answer
+        })
+    }
   }
+}
 </script>
 
 <style scoped>

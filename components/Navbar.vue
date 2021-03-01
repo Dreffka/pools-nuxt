@@ -1,114 +1,188 @@
-<!--<template>-->
-<!--  <header class="container-full">-->
-<!--    <nav class="navbar align-items-center row" aria-label="Green-office">-->
+<template>
 
-<!--      <ul class="first-header-list header-list row align-items-center">-->
-<!--        <li><nuxt-link to="/about">О нас</nuxt-link></li>-->
-<!--        <li><nuxt-link to="/clients">Клиентам</nuxt-link></li>-->
-<!--        <li><nuxt-link to="/contacts">Контакты</nuxt-link></li>-->
-<!--      </ul>-->
+  <header>
+    <div class="header-top d-flex justify-content-around align-items-center">
+      <div class="col-md-6">
+        <p>Позвоните нам по телефону
+          <a href="tel:0988633533">+38 (098) 863-35-33</a>
+          или
+          <a href="#" @click="$bvModal.show('bv-modal-header')">
+            Заполните форму
+          </a>
+        </p>
+      </div>
+    </div>
 
-<!--      <div class=" row justify-content-center align-items-center logo-container">-->
+    <b-modal id="bv-modal-header" class="text-center" hide-footer>
+      <template #modal-title>
+        Связаться с нами
+      </template>
+      <div class="d-block text-center">
+        <Form/>
+      </div>
+    </b-modal>
+
+    <b-navbar class="container-fluid shadow-sm bg-white fixed-top" toggleable="lg" type="black" variant="info" >
+<!--      <b-navbar-brand href="#">-->
 <!--        <nuxt-link to="/"><img src="@/static/logo.png" class="logo" alt=""></nuxt-link>-->
-<!--      </div>-->
-<!--      <a href="tel:0988633533" class="tel-header">+38 (098) 863-35-33</a>-->
+<!--      </b-navbar-brand>-->
+      <div class="navbar-brand">
+        <nuxt-link to="/"><img src="@/static/logo.png" class="logo" alt=""></nuxt-link>
+      </div>
 
-<!--      &lt;!&ndash;        <menu class="header-right">&ndash;&gt;-->
-<!--      <ul class="second-header-list header-list justify-content-center align-items-center d-flex">-->
-<!--        <li><nuxt-link to="/pools">Бассейны</nuxt-link></li>-->
-<!--        <li><nuxt-link to="/equipment">Оборудование</nuxt-link></li>-->
-<!--      </ul>-->
-<!--      &lt;!&ndash;        </menu>&ndash;&gt;-->
-<!--      &lt;!&ndash;    </div>&ndash;&gt;-->
-<!--    </nav>-->
-<!--  </header>-->
-<!--</template>-->
+      <b-navbar-toggle class="header-menu" target="nav-collapse">
+        ☰
+      </b-navbar-toggle>
 
-<!--<script>-->
-<!--export default {-->
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item-dropdown class = "menu-items text-black" text="Бассейны"  right>
+            <b-dropdown-item to="/pools/standart">Стандарт</b-dropdown-item>
+            <b-dropdown-item to="/pools/premium">Премиум</b-dropdown-item>
+          </b-nav-item-dropdown>
+          <b-nav-item to="/watering">Поливы</b-nav-item>
+          <b-nav-item to="/ponds">Пруды</b-nav-item>
+          <b-nav-item to="/about">О нас</b-nav-item>
+          <b-nav-item to="/contacts">Контакты</b-nav-item>
 
-<!--}-->
-<!--</script>-->
-<!--<style scoped>-->
+          <b-nav-item-dropdown class = "menu-items text-black" text="Клиентам"  right>
+            <b-dropdown-item to="/clients/portfolio">Портфолио</b-dropdown-item>
+            <b-dropdown-item to="/clients/about-composition-pool">Про бассейны</b-dropdown-item>
+            <b-dropdown-item to="/clients/installation">Установка бассейнов</b-dropdown-item>
+          </b-nav-item-dropdown>
+
+          <b-nav-item-dropdown class = "menu-items" text="Оборудование" right>
+            <b-dropdown-item to="/">На бассейны (гугл док)</b-dropdown-item>
+            <b-dropdown-item to="/">На пруды (гугл док)</b-dropdown-item>
+            <!-- <b-dropdown-item><nuxt-link to="/equipment/coverings">Накрытия для бассейнов</nuxt-link></b-dropdown-item> -->
+            <!-- <b-dropdown-item><nuxt-link to="/">Аксессуары (гугл док)</nuxt-link></b-dropdown-item> -->
+<!--            <b-dropdown-item><nuxt-link to="/equipment/service">Обслуживание</nuxt-link></b-dropdown-item>-->
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+
+        <!-- <b-navbar-nav class="ml-auto">
+          <b-nav-item-dropdown class="menu-items" text="Язык" right>
+            <b-dropdown-item href="#">РУС</b-dropdown-item>
+            <b-dropdown-item href="#">УКР</b-dropdown-item>
+
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+         -->
+      </b-collapse>
+    </b-navbar>
+
+  </header>
+
+</template>
 
 
-<!--header {-->
-<!--  background-color: rgba(255, 255, 255, 0.85);-->
-<!--  position: absolute;-->
-<!--  top: 0;-->
-<!--  z-index: 50;-->
 
-<!--}-->
 
-<!--.container-full{-->
-<!--  padding-left: 10%;-->
-<!--  padding-right: 10%;-->
-<!--}-->
+<script>
+import Modal from '@/components/Modal'
 
-<!--.first-header-list{-->
-<!--  flex-basis: 35%;-->
-<!--}-->
 
-<!--.logo-container{-->
-<!--  flex-basis: 30%;-->
-<!--}-->
+export default {
 
-<!--.tel-header{-->
-<!--  flex-basis: 15%;-->
-<!--}-->
+  components: {
+    Modal
+  }
+}
+</script>
 
-<!--.second-header-list{-->
-<!--  flex-basis: 20%;-->
-<!--}-->
+<style >
 
-<!--.logo{-->
-<!--  width: 320px;-->
-<!--}-->
 
-<!--.header-list{-->
-<!--  margin: 0;-->
-<!--}-->
+.navbar-toggler {
+  background-color: rgba(5, 5, 5, 0.15);
+}
 
-<!--.header-list li{-->
-<!--  list-style-type:none;-->
-<!--  margin: 10px;-->
-<!--}-->
+header {
+  background-color: rgba(21, 4, 4, 0.85);
+  z-index: 10;
+  position: relative;
+}
 
-<!--.header-list li > a , .tel-header{-->
-<!--  font-family: 'Open Sans';-->
-<!--  color: #000;-->
-<!--  font-size: 16px;-->
-<!--  text-decoration: none;-->
-<!--  text-transform: uppercase;-->
-<!--  font-weight: 500;-->
-<!--}-->
+.header-top{
+  /*height: 30px;*/
+  background: #072e58;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+}
 
-<!--.tel-header{-->
-<!--  /*        font-size: 14px;*/-->
-<!--  padding: 0;-->
-<!--  position: relative;-->
-<!--  text-align: center;-->
-<!--  /*-->
-<!--          text-transform: lowercase;-->
-<!--          letter-spacing: -0.5px;-->
-<!--  */-->
-<!--}-->
+.header-top p{
+  color:white;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  margin-bottom: 0;
+  padding: 5px 0;
+}
 
-<!--.tel-header:before{-->
-<!--  content: '';-->
-<!--  background-image: url(/img/tech/telephone-icon.png);-->
-<!--  background-size: contain;-->
-<!--  position: absolute;-->
-<!--  top: 3px;-->
-<!--  left: -20px;-->
-<!--  width: 15px;-->
-<!--  height: 15px;-->
-<!--}-->
+.header-top a{
+  color:#3ca8f7;
+  text-decoration: underline;
+}
 
-<!--/*-->
-<!--    .container-fluid {-->
-<!--    padding-left: 8%;-->
-<!--    padding-right: 8%;-->
-<!--}-->
-<!--*/-->
-<!--</style>-->
+.header-fixed-part{
+  /* margin-top: 30px; */
+  height: 70px;
+  top:0;
+}
+
+.dropdown-item a{
+  color: black;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.nav-link, .menu-items span{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black !important;
+}
+
+.nav-link:hover, .menu-items:hover{
+  text-decoration: underline;
+}
+
+.fixed-top{
+  position: sticky;
+}
+
+.logo{
+  /*margin-left: 5em;*/
+  width: 250px;
+}
+
+.navbar-nav{
+  padding-left: 10%;
+}
+
+.header-list{
+  margin: 0;
+}
+
+.header-list li{
+  list-style-type:none;
+  margin: 10px;
+}
+
+.header-list li > a {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar {
+  background-color: #fff;
+}
+</style>

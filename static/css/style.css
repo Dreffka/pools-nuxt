@@ -1,38 +1,46 @@
 
 /*стили*/
 
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-    background-color: #e0eaee;
+
+@font-face {
+  font-family: "Open Sans"; /* Имя шрифта */
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700'); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: "Montserrat"; /* Имя шрифта */
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600'); /* Путь к файлу со шрифтом */
 }
 
-/*p, span{*/
-/*  font-size: 18px;*/
-/*}*/
-/*h1{*/
-/*    font-family: Roboto;*/
-/*  font-size: 44px;*/
-/*}*/
-/*h2{*/
-/*  font-size: 40px;*/
-/*}*/
-/*h3{*/
-/*  font-size: 38px;*/
-/*}*/
-/*h4{*/
-/*  font-size: 36px;*/
-/*}*/
-/*h5{*/
-/*  font-size: 34px;*/
-/*}*/
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(83, 207, 185, 0.3);
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Open Sans', sans-serif;
+}
+
+p, ul, ol, span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+ol{
+  list-style-type: decimal;
+  margin-left: 15px;
+}
+
+h1, h2{
+  font-size: 45px;
+}
+h3, h4{
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
 
 .container-fluid{
   padding-left: 10%;
@@ -67,11 +75,12 @@ html {
   border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
-  box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.1);
+  transition-duration: 0.4s;
+  box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.5);
 }
 
 .btn-small:hover {
-  transition-duration: 0.4s;
+
   box-shadow: none;
   color: #fff;
 }
@@ -88,9 +97,6 @@ html {
 
 /*Форма для футера*/
 
-/*footer-form .form-group.col-md-6{*/
-/*        margin: 0;*/
-/*    }*/
 
     .footer-form .form-group{
         padding: 0;
@@ -116,6 +122,74 @@ html {
         width: 100%;
     }
 
-    /*.footer-form form{*/
-    /*    margin: 20px 0 !important;*/
-    /*}*/
+/* Кнопка  на главной странице *************************************/
+.button-style1{
+  /*font-family: sans-serif;*/
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  color:black;
+  /* height: 50px; */
+  display: inline-block;
+  padding: 0.7em 3em;
+  border: 3px solid #46a289;
+  transition: all 300ms ease;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.button-style1 span{
+  position: relative;
+  padding: 0 0.2em;
+  z-index: 50  !important;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.button-style1 span:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: auto; right: 0;
+  height: 100%;
+  width: 0;
+  background: #46a289;
+  z-index: -1;
+  transition: all 300ms ease;
+
+}
+
+.button-style1:hover{
+  color: white;
+  box-shadow:none;
+
+}
+
+.button-style1:hover span:before{
+  content: '';
+  width: 100%;
+  left: 0; right: 0;
+}
+
+.space-bot {
+  padding-bottom: 120px;
+}
+
+.button-style2{
+  color: #104278;
+  background: #dae5ee;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 15px;
+  transition: all 0.3s;
+  /* margin: 30px 20px; */
+  font-size: 14px;
+}
+
+
+
+.button-style2:hover{
+  background: white;
+  text-decoration: none;
+}

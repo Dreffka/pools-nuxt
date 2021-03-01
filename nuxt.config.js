@@ -30,9 +30,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '@/plugins/vue-light-gallery.js'
     { src: '~/plugins/vue-light-gallery', mode: "client" },
-    { src: '~/plugins/vue-i18n'}
+    { src: '~/plugins/vue-gtag' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,12 +47,14 @@ export default {
     'bootstrap-vue/nuxt'
   ],
 
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
       compact: true,
     }
   },
-
-
 }
