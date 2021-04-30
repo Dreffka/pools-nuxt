@@ -9,9 +9,10 @@
                 <div class="footer-mid">
                     <h2>Центральный офис</h2>
                     <div class="social-media">
-                        <a href="https://instagram.com/greenoffice38" target="_blank"><img src="@/static/img/tech/instagram.png"  alt="instagram"></a>
-                        <a href=""><img src="@/static/img/tech/facebook.png" alt="facebook"></a>
-                        <a href=""><img src="@/static/img/tech/viber.png" alt="viber"></a>
+
+                        <a href="https://www.instagram.com/greenoffice.pools" target="_blank"><img src="@/static/img/tech/instagram.png"  alt="instagram"></a>
+                        <a href="ttps://www.facebook.com/greenoffice.pools" target="_blank"><img src="@/static/img/tech/facebook.png" alt="facebook"></a>
+                        <a href="viber://add?number=380988633533"><img src="@/static/img/tech/viber.png" alt="viber"></a>
                     </div>
                     <div class="pt-3">
                       <p>Адрес офиса: г. Запорожье, ул. Верхняя, 10</p>

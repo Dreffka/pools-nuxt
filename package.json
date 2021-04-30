@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
     "vue-gtag": "^1.11.0",
     "vue-i18n": "^8.22.4",
-    "vue-light-gallery": "^1.0.1"
+    "vue-light-gallery": "^1.0.1",
+    "vuex": "^3.6.2"
   }
 }

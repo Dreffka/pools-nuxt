@@ -97,12 +97,6 @@ export default {
   background-color: rgba(5, 5, 5, 0.15);
 }
 
-header {
-  background-color: rgba(21, 4, 4, 0.85);
-  z-index: 10;
-  position: relative;
-}
-
 .header-top{
   /*height: 30px;*/
   background: #072e58;

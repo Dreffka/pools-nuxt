@@ -1,26 +1,5 @@
 <template>
   <div>
-    <!-- <form method="post" class="mt-3">
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="formName"></label>
-            <input type="text" class="form-control"  placeholder="Ваше имя" id="formName" v-model="name" required>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="formTel"></label>
-            <input type="tel" class="form-control"  placeholder="Номер телефона" id="formTel" v-model="telephone_number" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="formMsg"></label>
-          <textarea class="form-control textAreaBig"  placeholder="Ваше сообщение" id="formMsg" v-model="answer" ></textarea>
-        </div>
-
-        <div class = "submitBtn form-group">
-          <button type="submit" class="btn btn-lightgreen" @click.prevent="createClient()" >Отправить</button>
-        </div>
-      </form> -->
-
 
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -38,7 +17,7 @@
         </div>
 
         <div class = "submitBtn form-group">
-          <button type="submit" class="btn btn-lightgreen" @click.prevent="createClient()" >Отправить</button>
+          <button type="submit" class="btn btn-lightgreen" @click="createClient" >Отправить</button>
         </div>
 
 
@@ -47,23 +26,32 @@
 </template>
 
 <script>
-import axios from '@nuxtjs/axios'
+import axios from 'axios'
+
 export default {
   data() {
     return {
       name: '',
       telephone_number: '',
-      answer: ''
+      answer: '',
+      notes: new Date
     }
   },
   methods: {
 
-    createClient(name, telephone_number, answer) {
+    async createClient() {
 
-      axios.post('https://admin.greenoffice.in.ua/api/clients', {
-            name,
-            telephone_number,
-            answer
+      await axios.post('https://admin.greenoffice.in.ua/api/clients', {
+            name: this.name,
+            telephone_number: this.telephone_number,
+            answer: this.answer,
+            notes: this.notes
+        })
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((err) => {
+          console.log(err)
         })
     }
   }

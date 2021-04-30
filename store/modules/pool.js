@@ -30,7 +30,7 @@
     },
 
     UPDATE_SINGLE_POOL(state, pool) {
-      state.pool = pool.data
+      state.pool = pool
     }
   }
 

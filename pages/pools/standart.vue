@@ -6,34 +6,9 @@
     </div>
 
     <div class="row pool-list">
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3" v-for="pool in pools" :key="pool.id">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3" v-for="pool in allStandartPools.data" :key="pool._id">
             <div class="models-pools">
-                <nuxt-link :to="{ name: 'pools-id', params: {
-                  id: pool.id,
-                  length: pool.length,
-                  width: pool.width,
-                  height: pool.height,
-                  title_rus: pool.title_rus,
-                  photo: pool.photo,
-                  photo_alt: pool.photo_alt,
-                  price: pool.price,
-                  description_rus: pool.description_rus,
-                  short_description_rus: pool.short_description_rus,
-                  slider_image1: pool.slider_image1,
-                  slider_image2: pool.slider_image2,
-                  slider_image3: pool.slider_image3,
-                  slider_image1_alt: pool.slider_image1_alt,
-                  slider_image2_alt: pool.slider_image2_alt,
-                  slider_image3_alt: pool.slider_image3_alt,
-                  gallery_image1: pool.gallery_image1,
-                  gallery_image2: pool.gallery_image2,
-                  gallery_image3: pool.gallery_image3,
-                  gallery_image1_alt: pool.gallery_image1_alt,
-                  gallery_image2_alt: pool.gallery_image2_alt,
-                  gallery_image3_alt: pool.gallery_image3_alt,
-
-
-                } }" >
+                <nuxt-link :to="'/pools/'+pool.id" >
                     <div class="pool-card-center">
                         <div class="pool-img-center">
                             <img :src="pool.photo" class="pool-img" :alt="pool.photo_alt">
@@ -50,7 +25,7 @@
 </template>
 
 <script>
-
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
    head() {
@@ -58,18 +33,12 @@ export default {
       title: 'Бассейны стандарт | Грин Офис бассейны поливы пруды Запорожье'
     }
   },
-  data(){
-    return {
-      pools: [],
-    }
-  },
+
+  computed: mapGetters(['allStandartPools']),
+  methods: mapActions(['fetchStandartPools']),
 
   async mounted() {
-    const res = await fetch(
-      'https://admin.greenoffice.in.ua/api/pools/1'
-    )
-    const pools = await res.json()
-    this.pools = pools.data
+   this.fetchStandartPools()
   }
 }
 </script>
